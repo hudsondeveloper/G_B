@@ -1,0 +1,88 @@
+﻿@model IEnumerable<G_B.Models.PneuG_B>
+
+@{
+    ViewBag.titulo = "Pneu";
+    var idArea = Session["idPneuG_B"];
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#datatableHUD").DataTable({
+            "language": {
+                "sProcessing": "Procesando...",
+                "sLengthMenu": "Mostrar _MENU_ registros",
+                "sZeroRecords": "resultado não encontrado",
+                "sEmptyTable": "Nenhum dado disponivel nesta tabla",
+                "sInfo": "Mostrando registros de _START_ a _END_ de um total de _TOTAL_ registros",
+                "sInfoEmpty": "Mostrando registros de 0 a 0 de un total de 0 registros",
+                "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix": "",
+                "sSearch": "Buscar:",
+                "sUrl": "",
+                "sInfoThousands": ",",
+                "sLoadingRecords": "Cargando...",
+            }, "order": [[0, "asc"]],
+            dom: "Blfrtip",
+            buttons: [
+       
+            ],
+            responsive: true,
+            "bPaginate": false
+        });
+    });
+
+
+</script>
+
+<a href="@Url.Action("Cadastrar","PneuG_B")" class="btn btn-app" style="width:100%">
+    <i class="fa fa-edit"></i> Adicionar
+</a>
+<div>
+
+    <table id="datatableHUD" class="hover" style="width:100%">
+        <thead>
+            <tr style="background-color:white">
+                <th>Dimensoes</th>
+                <th>Calibragem</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dimensoes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Calibragem)
+                </td>
+
+                <td>
+                    <a href="@Url.Action("Editar","PneuG_B" ,new { id = item.Id })" style="box-shadow:none"><i style="color: #65ab81;" title="editar" class="fa fa-edit fa-2x"></i></a>
+
+                    @*<a href="@Url.Action("UploadFile","PneuG_B",new {id = item.Id})" style="box-shadow:none"><i style="color: #65ab81;" title="arquivo" class="fa fa-download fa-2x"></i></a>
+
+                    <a href="@Url.Action("Detalhe","PneuG_B",new { id = item.Id })" style="box-shadow:none"><i style="color: #65ab81" ; title="Relatorios" class="fa fa-archive fa-2x"></i></a>*@
+
+                    @*<a href="@Url.Action("Comentario","VeiculoG_B",new { id = item.Id })" style="box-shadow:none"><i style="color: #65ab81" ; title="comentario" class="fa fa-file fa-2x"></i></a>*@
+
+
+                </td>
+            </tr>
+
+            }
+
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+</div>
+
+<script>
+
+</script>
+
+
+

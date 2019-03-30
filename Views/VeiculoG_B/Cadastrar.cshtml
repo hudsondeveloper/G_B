@@ -1,0 +1,140 @@
+﻿
+@{
+    var idArea = Session["idArea"];
+    ViewBag.titulo = "Cadastrar Equipamento";
+}
+
+
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>  <small>  </small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">Settings 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form id="" data-parsley-validate class="form-horizontal form-label-left" action="@Url.Action("Cadastrar","VeiculoG_B",new { area = idArea})" method="post">
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="Placa">
+                            Placa <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="Placa" name="Placa" required="required" class="form-control col-md-4 col-xs-4">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="Modelo">
+                            Modelo <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="Modelo" name="Modelo" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Tipo">
+                            Tipo <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <select class="form-control" name="Tipo" id="Tipo" required>
+                                <option value="" selected disabled>SELECIONE</option>
+                                <option value="TIPO_1">TIPO 1</option>
+                                <option value="TIPO_2">TIPO 2</option>
+                                <option value="TIPO_3">TIPO 3</option>
+                                <option value="TIPO_4">TIPO 4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="Codigo">
+                            Código <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="Codigo" name="Codigo" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="AnoFabricacao">
+                            Ano de Fabricação <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4">
+                            <input type="number" id="AnoFabricacao" name="AnoFabricacao" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="ConsumoMedioFabricante">
+                            Consumo Médio Indicado Pelo Fabricante <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4">
+                            <input type="number" id="ConsumoMedioFabricante" name="ConsumoMedioFabricante" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="Horimetro">
+                            Horimetro  <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="Horimetro" name="Horimetro" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="KmRodado">
+                            Km Rodado  <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="KmRodado" name="KmRodado" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="DistribuicaoPneus">
+                            Distribuição de Pneus  <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="DistribuicaoPneus" name="DistribuicaoPneus" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                            <button class="btn btn-primary" type="reset">Reset</button>
+                            <button type="submit" class="btn btn-success">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
