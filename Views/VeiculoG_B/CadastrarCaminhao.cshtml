@@ -1,7 +1,7 @@
-﻿
+﻿@model G_B.Models.VeiculoG_B
+
 @{
-    var idArea = Session["idArea"];
-    ViewBag.titulo = "Cadastrar Equipamento";
+    ViewBag.titulo = "Cadastrar Caminhão";
 }
 
 
@@ -34,8 +34,89 @@
             </div>
             <div class="x_content">
                 <br />
-                <form id="" data-parsley-validate class="form-horizontal form-label-left" action="@Url.Action("Cadastrar","VeiculoG_B",new { area = idArea})" method="post">
+                <form id="" data-parsley-validate class="form-horizontal form-label-left" action="@Url.Action("CadastrarCaminhao","VeiculoG_B")" method="post" enctype="multipart/form-data">
 
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Tipo">
+                            Tipo <span class="required">*</span>
+                        </label>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <select class="form-control" name="TipoVeiculo" id="TipoVeiculo" required>
+                                <option value="" selected disabled>SELECIONE</option>
+                                <option value="t4x2">4x2</option>
+                                <option value="t6x2">6x2</option>
+                                <option value="t6x4">6x4</option>
+                                <option value="t8x4">8x4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                 
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Tipo">
+                                Especificacão <span class="required">*</span>
+                            </label>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <select class="form-control" name="Especificacao" id="Especificacao" required>
+                                    <option value="" selected disabled>SELECIONE</option>
+                                    <option value="GUINDAUTO">GUINDAUTO</option>
+                                    <option value="SUGADOR">SUGADOR</option>
+                                    <option value="SUPER_SUGADOR">SUPER SUGADOR</option>
+                                    <option value="POLI_GUINDASTE">POLI GUINDASTE</option>
+                                    <option value="COMPACTADOR">COMPACTADOR</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Codigo">
+                                CIV <span class="required">*</span>
+                            </label>
+                            <div class="col-md-4">
+                                @Html.TextBox("fileCIV", "", new { type = "file", style = "color: #6aba8e;" }) <br />
+
+                                @ViewBag.Message
+
+                            </div>
+                            @*<input type="submit" value="Pesquisar" class="col-md-3 col-sm-3 col-xs-3 " />*@
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Codigo">
+                                Vencimento CIV <span class="required">*</span>
+                            </label>
+                            <div class="col-md-4">
+                                <input type="date" id="VencimentoCIV" name="VencimentoCIV" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Codigo">
+                                Vencimento CIPP <span class="required">*</span>
+                            </label>
+                            <div class="col-md-4">
+                                @Html.TextBox("fileCIPP", "", new { type = "file", style = "color: #6aba8e;" }) <br />
+
+                                @ViewBag.Message
+
+                            </div>
+                            @*<input type="submit" value="Pesquisar" class="col-md-3 col-sm-3 col-xs-3 " />*@
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Codigo">
+                                Vencimento CIPP <span class="required">*</span>
+                            </label>
+                            <div class="col-md-4">
+                                <input type="date" id="VencimentoCIPP" name="VencimentoCIPP" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+
+                       
+                    <!---------------------------------------------------------Generico-------------------------------------------------------------------------------------------->
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Placa">
                             Placa <span class="required">*</span>
@@ -50,9 +131,10 @@
                             Modelo <span class="required">*</span>
                         </label>
                         <div class="col-md-4">
-                            <input type="text" id="Modelo" name="Modelo" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="number" id="Modelo" name="Modelo" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
+
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Codigo">

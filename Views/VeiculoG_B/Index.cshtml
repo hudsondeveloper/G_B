@@ -38,14 +38,24 @@
     <i class="fa fa-edit"></i> Adicionar
 </a>
 <div>
+    @*<form style="display:flex" class="form-group" name="radio" id="radio">
+        <label class="checkbox-inline">
+            <label class="checkbox-inline"><input type="checkbox" name="q1" value="LEVE">LEVE</label>
+            <label class="checkbox-inline"><input type="checkbox" name="q1" value="GUINDASTE">GUINDASTE</label>
+            <label class="checkbox-inline"><input type="checkbox" name="q1" value="CAMINHAO">CAMINHÃO</label>
+            <label class="checkbox-inline"><input type="checkbox" name="q1" value="PRANCHA">PRANCHA</label>
+            <label class="checkbox-inline"><input type="checkbox" name="q1" value="EQUIPAMENTO_IMPLEMENTO">EQUIPAMENTO IMPLEMENTO</label>
+        </label>
+</form>*@
 
     <table id="datatableHUD" class="hover" style="width:100%">
         <thead>
             <tr style="background-color:white">
                 <th>Placa</th>
-                <th>Modelo</th>
-                <th>Tipo</th>
+                <th>Categoria</th>
                 <th>Código</th>
+                <th>Tipo</th>
+                <th>Modelo</th>
                 <th>
                     Ano fabricação
                 </th>
@@ -53,54 +63,63 @@
                     Consumo médio  fabricante
                 </th>
                 <th>Horimetro </th>
-                <th>Km rodado  </th>
-                <th>Distribuição de pneus </th>
+                <th>Km rodado </th>
+                <th>
+                    Especificação
+                </th>
+                <th>Eixos</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Placa)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Modelo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Tipo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Codigo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AnoFabricacao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ConsumoMedioFabricante)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Horimetro)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.KmRodado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DistribuicaoPneus)
-                </td>
-                <td>
-                    <a href="@Url.Action("Editar","VeiculoG_B" ,new { id = item.Id })" style="box-shadow:none"><i style="color: #65ab81;" title="editar" class="fa fa-edit fa-2x"></i></a>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Placa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Categoria)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Codigo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoVeiculo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Modelo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnoFabricacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ConsumoMedioFabricante)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Horimetro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KmRodado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Especificacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Eixo)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Editar","VeiculoG_B" ,new { id = item.Id })" style="box-shadow:none"><i style="color: #65ab81;" title="editar" class="fa fa-edit fa-2x"></i></a>
 
-                    <a href="@Url.Action("UploadFile","VeiculoG_B",new {id = item.Id})" style="box-shadow:none"><i style="color: #65ab81;" title="arquivo" class="fa fa-download fa-2x"></i></a>
+                        <a href="@Url.Action("UploadFile","VeiculoG_B",new {id = item.Id})" style="box-shadow:none"><i style="color: #65ab81;" title="arquivo" class="fa fa-download fa-2x"></i></a>
 
-                    <a href="@Url.Action("Detalhe","VeiculoG_B",new { id = item.Id })" style="box-shadow:none"><i style="color: #65ab81" ; title="Relatorios" class="fa fa-archive fa-2x"></i></a>
+                        <a href="@Url.Action("Detalhe","VeiculoG_B",new { id = item.Id })" style="box-shadow:none"><i style="color: #65ab81" ; title="Relatorios" class="fa fa-archive fa-2x"></i></a>
 
-                    @*<a href="@Url.Action("Comentario","VeiculoG_B",new { id = item.Id })" style="box-shadow:none"><i style="color: #65ab81" ; title="comentario" class="fa fa-file fa-2x"></i></a>*@
+                        @*<a href="@Url.Action("Comentario","VeiculoG_B",new { id = item.Id })" style="box-shadow:none"><i style="color: #65ab81" ; title="comentario" class="fa fa-file fa-2x"></i></a>*@
 
 
-                </td>
-            </tr>
+                    </td>
+                </tr>
 
             }
 
@@ -112,6 +131,14 @@
 </div>
 
 <script>
+
+    //$('#radio').change(function () {
+    //    var valor = document.querySelector('input[name="q1"]:checked').value;
+    //    document.getElementsByClassName("form-control input-sm").value = "asdsd";
+    //    alert(valor)
+     
+    //});
+
 
 </script>
 
