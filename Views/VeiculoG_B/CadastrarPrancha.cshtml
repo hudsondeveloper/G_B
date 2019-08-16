@@ -40,7 +40,7 @@
                             Tipo <span class="required">*</span>
                         </label>
                         <div class="col-md-4 col-sm-4 col-xs-4">
-                            <select class="form-control" name="TipoVeiculo" id="TipoVeiculo" required>
+                            <select class="form-control" name="TipoVeiculo" id="TipoVeiculo" required >
                                 <option value="" selected disabled>SELECIONE</option>
                                 <option value="NORMAL">NORMAL</option>
                                 <option value="EXTENSIVEL">EXTENSIVEL</option>
@@ -50,10 +50,10 @@
 
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Tipo">
-                            Especificacão <span class="required">*</span>
+                            Especificacão <span class="required"></span>
                         </label>
                         <div class="col-md-4 col-sm-4 col-xs-4">
-                            <select class="form-control" name="Especificacao" id="Especificacao" required>
+                            <select class="form-control" name="Especificacao" id="Especificacao" >
                                 <option value="" selected disabled>SELECIONE</option>
                                 <option value="ALTA">ALTA</option>
                                 <option value="BAIXA_COM_OU_SEM_RAMPA">BAIXA_COM_OU_SEM_RAMPA</option>
@@ -64,10 +64,10 @@
 
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Tipo">
-                            Eixos <span class="required">*</span>
+                            Eixos <span class="required"></span>
                         </label>
                         <div class="col-md-4 col-sm-4 col-xs-4">
-                            <select class="form-control" name="Eixo" id="Eixo" required>
+                            <select class="form-control" name="Eixo" id="Eixo" >
                                 <option value="" selected disabled>SELECIONE</option>
                                 <option value="3">3 Eixos</option>
                                 <option value="4">4 Eixos</option>
@@ -80,7 +80,7 @@
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Codigo">
-                            CIV <span class="required">*</span>
+                            CIV <span class="required"></span>
                         </label>
                         <div class="col-md-4">
                             @Html.TextBox("fileCIV", "", new { type = "file", style = "color: #6aba8e;" }) <br />
@@ -94,17 +94,17 @@
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Codigo">
-                            Vencimento CIV <span class="required">*</span>
+                            Vencimento CIV <span class="required"></span>
                         </label>
                         <div class="col-md-4">
-                            <input type="date" id="VencimentoCIV" name="VencimentoCIV" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="date" id="VencimentoCIV" name="VencimentoCIV" class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
 
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Codigo">
-                            CIPP <span class="required">*</span>
+                            CIPP <span class="required"></span>
                         </label>
                         <div class="col-md-4">
                             @Html.TextBox("fileCIPP", "", new { type = "file", style = "color: #6aba8e;" }) <br />
@@ -121,13 +121,13 @@
                             Vencimento CIPP <span class="required">*</span>
                         </label>
                         <div class="col-md-4">
-                            <input type="date" id="VencimentoCIPP" name="VencimentoCIPP" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="date" id="VencimentoCIPP" name="VencimentoCIPP"  class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Codigo">
-                            AEts Federal <span class="required">*</span>
+                            AEts Federal <span class="required"></span>
                         </label>
                         <div class="col-md-4">
                             @Html.TextBox("fileFederal", "", new { type = "file", style = "color: #6aba8e;" }) <br />
@@ -140,16 +140,16 @@
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Codigo">
-                            Vencimento Federal <span class="required">*</span>
+                            Vencimento Federal <span class="required"></span>
                         </label>
                         <div class="col-md-4">
-                            <input type="date" id="VencimentoAETsFederal" name="VencimentoAETsFederal" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="date" id="VencimentoAETsFederal" name="VencimentoAETsFederal"  class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Codigo">
-                            AEts Estadual <span class="required">*</span>
+                            AEts Estadual <span class="required"></span>
                         </label>
                         <div class="col-md-4">
                             @Html.TextBox("fileEstadual", "", new { type = "file", style = "color: #6aba8e;" }) <br />
@@ -162,10 +162,10 @@
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Codigo">
-                            Vencimento Estadual <span class="required">*</span>
+                            Vencimento Estadual <span class="required"></span>
                         </label>
                         <div class="col-md-4">
-                            <input type="date" id="VencimentoAETsEstadual" name="VencimentoAETsEstadual" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="date" id="VencimentoAETsEstadual" name="VencimentoAETsEstadual"  class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
                     <!---------------------------------------------------------Generico-------------------------------------------------------------------------------------------->
@@ -174,7 +174,7 @@
                             Placa <span class="required">*</span>
                         </label>
                         <div class="col-md-4">
-                            <input type="text" id="Placa" name="Placa" required="required" class="form-control col-md-4 col-xs-4">
+                            <input type="text" id="Placa" name="Placa" required class="form-control col-md-4 col-xs-4">
                         </div>
                     </div>
 
@@ -183,55 +183,55 @@
                             Modelo <span class="required">*</span>
                         </label>
                         <div class="col-md-4">
-                            <input type="number" id="Modelo" name="Modelo" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="text" id="Modelo" name="Modelo" required class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
 
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Codigo">
-                            Código <span class="required">*</span>
+                            Código <span class="required"></span>
                         </label>
                         <div class="col-md-4">
-                            <input type="text" id="Codigo" name="Codigo" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="text" id="Codigo" name="Codigo"  class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
 
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="AnoFabricacao">
-                            Ano de Fabricação <span class="required">*</span>
+                            Ano de Fabricação <span class="required"></span>
                         </label>
                         <div class="col-md-4">
-                            <input type="number" id="AnoFabricacao" name="AnoFabricacao" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="number" id="AnoFabricacao" name="AnoFabricacao"  class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="ConsumoMedioFabricante">
-                            Consumo Médio Indicado Pelo Fabricante <span class="required">*</span>
+                            Consumo Médio Indicado Pelo Fabricante <span class="required"></span>
                         </label>
                         <div class="col-md-4">
-                            <input type="number" id="ConsumoMedioFabricante" name="ConsumoMedioFabricante" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="number" id="ConsumoMedioFabricante" name="ConsumoMedioFabricante"  class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="Horimetro">
-                            Horimetro  <span class="required">*</span>
+                            Horimetro  <span class="required"></span>
                         </label>
                         <div class="col-md-4">
-                            <input type="text" id="Horimetro" name="Horimetro" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="text" id="Horimetro" name="Horimetro"  class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
 
 
                     <div class="form-group">
                         <label class="control-label col-md-3" for="KmRodado">
-                            Km Rodado  <span class="required">*</span>
+                            Km Rodado  <span class="required"></span>
                         </label>
                         <div class="col-md-4">
-                            <input type="text" id="KmRodado" name="KmRodado" required="required" class="form-control col-md-7 col-xs-12">
+                            <input type="text" id="KmRodado" name="KmRodado"  class="form-control col-md-7 col-xs-12">
                         </div>
                     </div>
 
